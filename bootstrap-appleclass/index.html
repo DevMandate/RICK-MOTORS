@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title >RICK MOTORS/Home</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" href="cj.css">
+	<link rel="stylesheet" type="text/css" href="searchbar.css">
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<!-- <https://code.jquery.com/jquery-3.4.1.slim.min.js> -->
+
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+<style>
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+<style>
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+
+</style>
+
+<style>
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+
+</head>
+	<body style="background:url(images/bg3.jpeg) no-repeat center center fixed; webkit-background-size:cover; moz-background:cover; 0-background-size:cover; background-size:cover;" >
+	<center>
+		<div>
+			<img src="images/thelogo.PNG" height="225" width="75%" >
+		</div>			
+	</center>
+	 <section class="row">
+		<div class="col-md-12 bg-dark">
+			<nav class="navbar navbar-expand-md bg-warning navbar-dark " >
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<!-- Navbar links -->
+		
+				<div class="collapse navbar-collapse" id="collapsibleNavbar" class="topnav">
+					
+				<ul class="navbar-nav ">
+					<li>
+						<a class="btn btn-primary" href='index.html' style="font-family: Copperplate Gothic Light;">HOME</a>  / 
+					</li><br>
+					<li >
+						<a class="btn btn-primary" href='suvs.html' style="font-family: Copperplate Gothic Light;">SUVS </a>  /   
+					</li><br>
+					<li > 
+						<a class="btn btn-primary" href='trucks.html'style="font-family: Copperplate Gothic Light;">TRUCKS</a>  /
+					</li><br>
+																					
+					<li >
+						<a class="btn btn-primary" href='buses.html'style="font-family: Copperplate Gothic Light;">BUSES</a>  /
+					</li><br>
+					
+					<li >
+						<a class="btn btn-primary" href='motorhomes.html'style="font-family: Copperplate Gothic Light;">MOTOR HOMES</a>  /
+					</li><br>
+					<li >
+						<a class="btn btn-primary" href='bikes.html'style="font-family: Copperplate Gothic Light;">BIKES</a>  /
+					</li><br>
+					<li >
+						<a class="btn btn-primary" href='about.html'style="font-family: Copperplate Gothic Light;"> ABOUT</a>  /
+					</li><br>									
+				</ul>
+				
+		</div>
+		</center>
+			<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Search</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="suvs.html">Suvs</a>
+    <a href="trucks.html">Trucks</a>
+    <a href="buses.html">Buses</a>
+    <a href="#motorhomes.html">Motor Homes</a>
+    <a href="bikes.html">Bikes</a>
+    <a href="about.html">About Us</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</div>
+		
+
+
+
+
+
+
+			    </nav>
+		        </div>
+  </section>
+  <hr>
+  <section class="row">
+  	<div class="col-md-12">
+<center>
+<img src="images/welcome3.gif" height="120">
+</center>
+</div>
+</section><br>
+
+
+   <section class="row">
+	<div class="col-md-12">
+		<div id="demo" class="carousel slide " data-ride="carousel">
+		<!-- Indicators -->
+		<ul class="carousel-indicators">
+		<li data-target="#demo" data-slide-to="0" class="active"></li>
+		<li data-target="#demo" data-slide-to="1"></li>
+		<li data-target="#demo" data-slide-to="2"></li>
+		<li data-target="#demo" data-slide-to="3"></li>
+		<li data-target="#demo" data-slide-to="4"></li>
+		</ul>
+
+		<!-- The slideshow -->
+		<div class="card">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+			     <img src="images/bg2.jpeg" width="100%" height="500">
+			     <div class="carousel-caption">
+			     	<div class=" bg-secondary text-white card">
+			     		<h2 style="font-family: Copperplate Gothic Light;">High Performance SUVS</h2></div>
+			     	<a href="suvs.html" class="btn btn-info" style="font-family: Copperplate Gothic Light;">See More</a>
+			     </div>
+			</div>
+
+			<div class="carousel-item">
+			    <img src="images/truck3.jpg"width="100%" height="500">
+        <div class="carousel-caption">
+			     	<div class=" bg-secondary text-white card"><h2 style="font-family: Copperplate Gothic Light;">Best When It Comes To Trucks</h2></div>
+			    	 <a href="trucks.html" class="btn btn-warning" style="font-family: Copperplate Gothic Light;">See more</a>
+			     </div>
+			</div>
+
+			<div class="carousel-item">
+			     <img src="images/bus7.jpg" width="100%"height="500">
+			     <div class="carousel-caption">
+			     	<div class=" bg-secondary text-white card"><h2 style="font-family: Copperplate Gothic Light;">Cool Buses</h2></div>
+			    	 <a href="buses.html" class="btn btn-danger" style="font-family: Copperplate Gothic Light;">See more</a>
+			     </div>
+			</div>
+
+			<div class="carousel-item">
+			    <img src="images/special1.jpg"width="100%" height="500">
+        <div class="carousel-caption">
+			     	<div class=" bg-secondary text-white card"><h2 style="font-family: Copperplate Gothic Light;">Best Motorhomes Worldwide</h2></div>
+			    	 <a href="motorhomes.html" class="btn btn-success" style="font-family: Copperplate Gothic Light;">See more</a>
+			     </div>
+			</div>
+
+			<div class="carousel-item">
+			     <img src="images/bike55.jpeg" width="100%"height="500">
+			     <div class="carousel-caption">
+			     	<div class=" bg-secondary text-white card"><h2 style="font-family: Copperplate Gothic Light;">Exceptional Bikes</h2></div>
+			    	 <a href="bikes.html" class="btn btn-danger" style="font-family: Copperplate Gothic Light;">See more</a>
+			     </div>
+			</div>
+			</div>
+
+		 
+
+		<!-- Left and right controls -->
+		<div>
+		<a class="carousel-control-prev" href='#demo' data-slide="prev">
+		<span class="carousel-control-prev-icon"></span>
+		</a>
+		<a class="carousel-control-next" href='#demo' data-slide="next">
+		<span class="carousel-control-next-icon"></span>
+		</a>
+		</div>
+	</div>
+</section>]
+<br>
+<br><hr>
+
+<center>
+<div class="col-md-12">
+		<div class="card">
+				<h1 style="text-align:center;color: white; font-family: Copperplate Gothic Light; background-color: violet;"><marquee scrolldelay="20" >NEW ARRIVALS!!! NEW ARRIVALS!!! NEW ARRIVALS!!!</marquee></h1>
+
+		</div>
+	 </div><br>
+</center>
+
+
+	<section class="row">
+	<div class="col-md-4">
+		<div class="card">
+			<img src="images/2019 Chevrolet Traverse.jpg" class="img-fluid" width="100%">
+			<div class="card-body bg-secondary">
+				<h3 class="Card Title btn btn-primary text-white" style="font-family: Copperplate Gothic Light;">2019 Chevrolet Traverse</h3>
+				<p class="card-text text-white" style="font-family: Copperplate Gothic Light;">Finally a new 2019 Chevrolet Traverse is available...</p>	<br><br><br><br>
+				<a href="suvs.html" class="btn btn-success" style="font-family: Copperplate Gothic Light;">Read On</a>
+
+			</div>
+		</div>
+	 </div>
+
+    <div class="col-md-4">
+		<div>
+			<div class="card">
+			<img src="images/ISUZU FTR 2020.jpg" class="img-fluid" width="100%">
+			<div class="card-body bg-secondary">
+				<h3 class="Card Title btn btn-primary text-white" style="font-family: Copperplate Gothic Light;">ISUZU FTR 2020 </h3>
+				<p class="card-text text-white" style="font-family: Copperplate Gothic Light;">The Long Awaited Isuzu FTR is Finally in stock...</p><br>
+				<a href="trucks.html" class="btn btn-success" style="font-family: Copperplate Gothic Light;">Read On</a>
+
+			</div>
+		</div>
+		</div>
+	 </div>
+
+    <div class="col-md-4">
+		<div>
+			<div class="card">
+			<img src="images/bus1.jpg" class="img-fluid" width="100%">
+			<div class="card-body bg-secondary">
+				<h3 class="Card Title btn btn-primary text-white" style="font-family: Copperplate Gothic Light;">Isuzu NovoCity Life Premium</h3>
+				<p class="card-text text-white" style="font-family: Copperplate Gothic Light;">The 2019 Isuzu NovoCity Life Premium is something every organisation should get there hands on...</p><br> 
+				<a href="buses.html" class="btn btn-success text-white" style="font-family: Copperplate Gothic Light;">Read On</a>
+
+		</div>
+	 </div>
+</section>
+
+<br><br>
+<center>
+<div class="col-md-12">
+		<div class="card">
+			<h1 style="text-align:center;color: white; font-family: Copperplate Gothic Light; background-color: violet;"><marquee scrolldelay="20">OFFER OF THE MONTH!!! 25% OFF FOR THE FIRST 50 BUYERS!!!OFFER OF THE MONTH!!! OFFER OF THE MONTH!!!</marquee></h1>
+
+			</div>
+	 </div><br>
+
+</center>
+
+
+
+	<section class="row">
+	<div class="col-md-4">
+		<div class="card">
+			<img src="images/" class="img-fluid" width="100%">
+			<div class="card-body bg-secondary">
+				<h3 class="Card Title btn btn-primary text-white " style="font-family: Copperplate Gothic Light;"></h3>
+				<p class="card-text text-white" style="font-family: Copperplate Gothic Light;">Get yourself the new___________ at a very special price just for you...</p><br><br><br><br><br><br><br>
+				<a href="bikes.html" class="btn btn-success" style="font-family: Copperplate Gothic Light;">Read On</a>
+
+			</div>
+		</div>
+	 </div>
+
+    <div class="col-md-4">
+			<div class="card">
+			<img src="images/truck5.jpg" class="img-fluid" width="100%" height="150">
+			<div class="card-body bg-secondary">
+				<h3 class="Card Title btn btn-primary text-white " style="font-family: Copperplate Gothic Light;">Scania S650</h3>
+				<p class="card-text text-white" style="font-family: Copperplate Gothic Light;">Get yourself the new 2020 Scania S650 V8 Truck at a very special price just for you...</p>
+				<a href="trucks.html" class="btn btn-success" style="font-family: Copperplate Gothic Light;">Read On</a>
+
+			</div>
+		</div>
+	</div>
+
+    <div class="col-md-4">
+			<div class="card">
+			<img src="images/" class="img-fluid" width="100%">
+			<div class="card-body bg-secondary">
+				<h3 class="Card Title btn btn-primary text-white" style="font-family: Copperplate Gothic Light;"></h3>
+				<p class="card-text text-white" style="font-family: Copperplate Gothic Light;">Get yourself a new ___________  at a very special price just for you...</p><br><br><br><br><br><br><br>
+				<a href="motorhomes.html" class="btn btn-success" style="font-family: Copperplate Gothic Light;">Read On</a>
+
+		</div>
+	 </div>
+	</div>
+</section>
+<br><br><hr>
+
+<center>
+		<div class="col-md-12">
+			<div class="card">
+			<h1 style="text-align:center;color: white; font-family: Copperplate Gothic Light; background-color: violet;"><marquee scrolldelay="20">LIMITED EDITIONS!!! HURRY WHILE STOCKS LASTS!!!</marquee></h1>
+			</div>
+	 </div><br>
+</center>
+
+
+	<section class="row">
+	<div class="col-md-4">
+		<div class="card">
+			<img src="images/" class="img-fluid" width="100%">
+			<div class="card-body bg-secondary">
+				<h3 class="Card Title btn btn-primary text-white" style="font-family: Copperplate Gothic Light;"></h3>
+				<p class="card-text text-white" style="font-family: Copperplate Gothic Light;">Hurry While Stocks Lasts...</p><br><br>
+				<a href="bikes.html" class="btn btn-success" style="font-family: Copperplate Gothic Light;">Read On</a>
+
+			</div>
+		</div>
+	 </div>
+
+    <div class="col-md-4">
+			<div class="card">
+			<img src="images/special1.jpg" class="img-fluid" width="100%">
+			<div class="card-body bg-secondary">
+				<h3 class="Card Title btn btn-primary text-white" style="font-family: Copperplate Gothic Light;">MERCEDES VARIO ALKOVEN 1200</h3>
+				<p class="card-text text-white" style="font-family: Copperplate Gothic Light;">Hurry While Stocks Lasts...</p><br><br>
+				<a href="motorhomes.html" class="btn btn-success" style="font-family: Copperplate Gothic Light;">Read On</a>
+
+			</div>
+		</div>
+	</div>
+
+    <div class="col-md-4">
+			<div class="card">
+			<img src="images/bus2.jpg" class="img-fluid" width="100%">
+			<div class="card-body bg-secondary">
+				<h3 class="Card Title btn btn-primary text-white" style="font-family: Copperplate Gothic Light;"> 2019 MAN Lion's Coach </h3>
+				<p class="card-text text-white" style="font-family: Copperplate Gothic Light;">Hurry While Stocks Lasts...</p><br>
+				<a href="buses.html" class="btn btn-success" style="font-family: Copperplate Gothic Light;">Read On</a>
+
+		</div>
+	 </div>
+	</div>
+</section>
+<br><br><hr>
+
+<section class="row">
+	<div class="col-md-3">
+		<center>
+					<br>
+						<a class="btn btn-danger" href='index.html' style="font-family: Copperplate Gothic Light;">HOME</a> <img src="images/welcome3.gif" height="50" width="20%">
+					
+					<br><br><br>
+						<a class="btn btn-danger" href='suvs.html' style="font-family: Copperplate Gothic Light;">SUVS </a> <img src="images/suv2.gif" height="50" width="20%">
+
+					<br><br><br>
+					
+						<a class="btn btn-danger" href='trucks.html' style="font-family: Copperplate Gothic Light;" >TRUCKS</a> <img src="images/truck7.gif" height="50" width="20%">
+
+					
+							<br><br><br>														
+					
+						<a class="btn btn-danger" href='buses.html' style="font-family: Copperplate Gothic Light;">BUSES</a> <img src="images/bus11.gif" height="50" width="20%">
+
+					
+					<br><br><br>
+					
+						<a class="btn btn-danger" href='motorhomes.html' style="font-family: Copperplate Gothic Light;">MOTOR HOMES</a> <img src="images/motorhomes3.gif" height="50" width="20%">
+					 
+					<br><br><br>
+
+					<a class="btn btn-danger" href='bikes.html' style="font-family: Copperplate Gothic Light;">BIKES</a><img src="images/bike1.gif" height="50" width="20%">
+					 
+					<br><br><br>
+						<a class="btn btn-danger" href='about.html' style="font-family: Copperplate Gothic Light;"> ABOUT</a> <img src="images/aboutus2.gif" height="50" width="20%">
+							<br><br>
+		</center>		
+			
+	</div>
+	<div class="col-md-6 ">
+		<center>
+			<img src="images/thelogo.PNG" height="200" width="100%" >
+		</center>
+		<center>
+		<h3 class="btn-success" style="text-align:center;color: white; font-family: Copperplate Gothic Light; padding-bottom:5px;">RICK MOTORS</h3>
+		<h4 class="btn-success" style="text-align:center;color: white; font-family: Copperplate Gothic Light;">2<sup>nd</sup> Avenue, Eastleigh, Kamkunji</h4>
+		<h4 class="btn-success" style="text-align:center;color: white; font-family: Copperplate Gothic Light;">Opposite Equity Bank,Eastleigh, Nairobi</h4>
+		<h4 class="btn-success" style="text-align:center;color: white; font-family: Copperplate Gothic Light;">P.O. Box 1423-00100 Eastleigh, Nairobi, Kenya</h4>
+		<h4 class="btn-success" style="text-align:center;color: white; font-family: Copperplate Gothic Light;"><img src="images/call2.gif" width="10%" height="40"> Tel: +254 707 332 333</h4>
+		<h4 class="btn-success" style="text-align:center;color: white; font-family: Copperplate Gothic Light;"><img src="images/email1.gif" width="10%" height="40">Email: info@rickmotors.co.ke</h4>
+		<h4 class="btn-success" style="text-align:center;color: white; font-family: Copperplate Gothic Light;">Website:www.rickmotors.co.ke</h4><br>
+		<section>
+		<h5 class="btn-success" style="text-align:center;color: white; font-family: Copperplate Gothic Light;"><a href="#" class="fa fa-facebook" target="_blank"></a> <a href="#" target="_blank"class="fa fa-twitter"></a> </a> <a href="#" target="_blank" class="fa fa-linkedin"></a> <a href="#" target="_blank"class="fa fa-youtube"></a> <a href="#" target="_blank"class="fa fa-instagram"></a> <a href="#" target="_blank" class="fa fa-skype"></a> <a href="#" target="_blank" class="fa fa-pinterest"></a> <a href="#" target="_blank"class="fa fa-snapchat-ghost"></a>
+
+
+
+</h5>
+		<h5 class="btn-success" style="text-align:center;color: white; font-family: Copperplate Gothic Light;"></h5>
+		</section>
+		<h5 class="btn-success" style="text-align:center;color: white; font-family: Copperplate Gothic Light;">All Rights Reserved .©2020</h5>
+		</center>
+	</div>
+	<div class="col-md-3">
+		<br><br>
+		<form>
+			<center>
+			<label class="btn btn-warning" style="font-family: Copperplate Gothic Light;">Subscribe For Our Newsletter</label>
+			</center>
+			<br><br>
+			<center>
+			<input type="email" name="email" placeholder="Email" size="30" style="font-family: Copperplate Gothic Light;">
+			</center>
+			<br><br>
+			<center>
+			<input type="submit" name="submit" placeholder="Subscribe" class="btn btn-success" style="font-family: Copperplate Gothic Light;">
+			</center>
+			<br><br>
+		</form><br><br>
+		<center>
+			<img src="images/privacypolicy.gif" height="50" width="20%"><br><br>
+		<a href="privacy.html" class="btn btn-info " style="padding left:50px;font-family: Copperplate Gothic Light;">Our Privacy Policy</a>
+
+		</center>
+	</div>
+</section>
+</body>
+</html>
+
+		
